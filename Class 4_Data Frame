@@ -1,0 +1,47 @@
+Name <- c('banpreet', 'aishwerya', 'jyoti', 'priyanka', 'aakanksha')
+Age <- c(22,23,24,25,26)
+MathMark <- c(24,35,34,34,34)
+ScienceMark <- c(65,67,56,78,23)
+TotalMark <- c(152,153,161,143,182)
+data <- data.frame(Name,Age,MathMark, ScienceMark, TotalMark)
+data
+View(data)
+data$TotalMark <-data$MathMark+data$ScienceMark
+View(data)
+
+data$pct_math <- round(100*data$MathMark/data$TotalMark)
+View(data)
+data <- data[,c(2,6)]     
+View(data)
+data <- data[,c(2:6)]
+data <- data(,c())
+names_data <- names(data)
+names(data) <- c('a','b')
+View(data)
+names(data) <- names_data
+View(data)
+vector1 <- seq(1,10, by=2)
+vecttor1[3] <-100
+
+v_col <- names(data)
+v_col[3] <- "NewMaths"
+View(data)
+
+data$Age=exp(data$Age)
+
+View(data)
+class(data$Name)
+data$Name <- as.character(data$Name)
+class(data$Name)
+
+
+s1 <-data$Age>=23
+
+data <- data[s1,]
+View(data)
+
+?sample
+
+sample_data <- sample(1:nrow(data),3,replace=F)
+sample_data
+sample_data
